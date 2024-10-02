@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Carbon Footprint Tracker</h1>
+        <form id="footprintForm">
+            <label for="weekSelect">Select Week:</label>
+            <select id="weekSelect" required>
+                <option value="Week 1">Week 1</option>
+                <option value="Week 2">Week 2</option>
+                <option value="Week 3">Week 3</option>
+                <option value="Week 4">Week 4</option>
+            </select>
+
+            <label for="milesDriven">Miles Driven (per week):</label>
+            <input type="number" id="milesDriven" required>
+
+            <!-- Updated label to electricity used per week -->
+            <label for="electricityUsed">Electricity Used (kWh per week):</label>
+            <input type="number" id="electricityUsed" required>
+
+            <label for="wasteProduced">Waste Produced (lbs per week):</label>
+            <input type="number" id="wasteProduced" required>
+
+            <button type="submit">Calculate My Carbon Footprint</button>
+        </form>
+
+        <div id="result" class="result"></div>
+        <canvas id="carbonChart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
